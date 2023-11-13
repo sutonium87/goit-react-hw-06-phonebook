@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-06-phonebook/static/css/main.ce790095.css",
+    "main.js": "/goit-react-hw-06-phonebook/static/js/main.ee1a4f68.js",
+    "static/media/vintage-pink-telephone-composition.jpg": "/goit-react-hw-06-phonebook/static/media/vintage-pink-telephone-composition.63ab078d9ef699176ffe.jpg",
+    "index.html": "/goit-react-hw-06-phonebook/index.html",
+    "main.ce790095.css.map": "/goit-react-hw-06-phonebook/static/css/main.ce790095.css.map",
+    "main.ee1a4f68.js.map": "/goit-react-hw-06-phonebook/static/js/main.ee1a4f68.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce790095.css",
+    "static/js/main.ee1a4f68.js"
+  ]
+}
