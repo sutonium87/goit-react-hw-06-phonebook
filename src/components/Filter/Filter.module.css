@@ -1,0 +1,21 @@
+.filterWrapper {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.filterInput {
+  font-size: 18px;
+  width: 266px;
+  height: auto;
+  padding: 8px;
+  background: aqua;
+  color: black;
+}
+
+.filterLabel {
+  align-self: center;
+  padding: 8px;
+  font-size: 18px;
+}

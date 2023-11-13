@@ -1,0 +1,31 @@
+.contactItem {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+p {
+  margin: 5px;
+}
+
+.formButton {
+  background-color: #a5c8ec;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 7px 10px;
+  text-align: center;
+  transition: all 0.8s;
+}
+
+.formButton:hover {
+  background-color: aqua;
+  color: #fff;
+}
+
+.contacts {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}

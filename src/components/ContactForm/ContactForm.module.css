@@ -1,0 +1,48 @@
+.phonebookWrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: aqua;
+  -webkit-text-stroke: 1px black;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.phonebookInput {
+  font-size: 20px;
+  width: 500px;
+  height: auto;
+  padding: 15px;
+  background: aqua;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.formButton {
+  width: 100px;
+  background-color: #a5c8ec;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.8s;
+  margin: 0 auto 0;
+}
+.formButton:hover {
+  background-color: aqua;
+  color: #fff;
+}
