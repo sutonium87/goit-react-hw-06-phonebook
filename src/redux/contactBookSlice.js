@@ -1,7 +1,5 @@
-// Importing necessary functions and utilities from Redux Toolkit
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
-// Initial state for the contacts slice
 const initialState = {
   contacts: [
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -11,18 +9,14 @@ const initialState = {
   ],
 };
 
-// Creating a slice for managing contacts
 const contactBookSlice = createSlice({
-  name: 'contacts', // Slice name
-  initialState: initialState, // Initial state
+  name: 'contacts',
+  initialState: initialState,
   reducers: {
-    // Reducer for adding contacts
     addContacts: {
       reducer(state, action) {
-        // Adding the new contact to the contacts array in the state
         state.contacts = [...state.contacts, action.payload];
       },
-      // Prepare function to create the action payload with an ID using nanoid
       prepare(name, number) {
         return {
           payload: {
@@ -33,17 +27,13 @@ const contactBookSlice = createSlice({
         };
       },
     },
-    // Reducer for deleting contacts
     deleteContacts: {
       reducer(state, action) {
-        // Filtering out the contact to be deleted from the contacts array
         state.contacts = state.contacts.filter(
           contact => contact.id !== action.payload.contact.id
         );
-        // Resetting the filter to an empty string (assuming 'filter' is part of the state)
         state.filter = '';
       },
-      // Prepare function to create the action payload with the contact to be deleted
       prepare(contact) {
         return {
           payload: {
@@ -55,6 +45,5 @@ const contactBookSlice = createSlice({
   },
 });
 
-// Exporting actions and reducer from the slice
 export const { addContacts, deleteContacts } = contactBookSlice.actions;
 export const contactBookReducer = contactBookSlice.reducer;

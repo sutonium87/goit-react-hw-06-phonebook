@@ -1,3 +1,6 @@
+
+
+
 .contactItem {
   display: flex;
   width: 500px;
@@ -7,9 +10,8 @@
 
 h2 {
   text-align: center;
-  color: aqua;
+  color: #4267b2;
   font-size: 2em;
-  -webkit-text-stroke: 1px black;
 }
 
 .contactList {
@@ -18,6 +20,7 @@ h2 {
   align-items: center;
   padding: 0;
   gap: 10px;
+ 
 }
 
 .contactWrapper {

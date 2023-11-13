@@ -1,24 +1,16 @@
-// Importing necessary libraries and components
-import React from 'react'; // React library
-import style from './ContactItem.module.css'; // CSS module styles
-import PropTypes from 'prop-types'; // PropTypes for defining component prop types
-import { Notify } from 'notiflix/build/notiflix-notify-aio'; // Notification library
+import React from 'react';
+import style from './ContactItem.module.css';
+import PropTypes from 'prop-types';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-// Importing Redux dependencies
-import { useDispatch } from 'react-redux'; // React Redux hook
-import { deleteContacts } from 'redux/contactBookSlice'; // Action creator for deleting contacts
+import { useDispatch } from 'react-redux';
+import { deleteContacts } from 'redux/contactBookSlice';
 
-// ContactItem component definition
 export default function ContactItem({ contacts }) {
-  // Redux hook for dispatching actions
   const dispatch = useDispatch();
 
-  // Handler for deleting a contact
   const handleDelete = () => {
-    // Dispatching the deleteContacts action to delete the contact
     dispatch(deleteContacts(contacts));
-
-    // Displaying an info notification for deleting the contact
     Notify.info(
       `${contacts.name} was successfully deleted from your phonebook`,
       {
@@ -27,16 +19,13 @@ export default function ContactItem({ contacts }) {
     );
   };
 
-  // Rendering the ContactItem component
   return (
     <div>
-      {/* List item for displaying contact information */}
       <li className={style.contactItem}>
         <div className={style.contacts}>
           <p>{contacts.name}</p>
           <p>{contacts.number} </p>
         </div>
-        {/* Button for deleting the contact */}
         <button
           type="button"
           className={style.formButton}
@@ -49,10 +38,9 @@ export default function ContactItem({ contacts }) {
   );
 }
 
-// Prop types for the ContactItem component
 ContactItem.propTypes = {
-  id: PropTypes.string.isRequired, // Prop type for the contact ID
-  name: PropTypes.string.isRequired, // Prop type for the contact name
-  number: PropTypes.string.isRequired, // Prop type for the contact number
-  onDeleteContact: PropTypes.func.isRequired, // Prop type for the delete contact handler
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
