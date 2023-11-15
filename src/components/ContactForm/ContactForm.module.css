@@ -6,6 +6,7 @@
 
 h1 {
   text-align: center;
+  -webkit-text-stroke: 1px black;
   color: aqua;
 }
 
@@ -21,7 +22,7 @@ h1 {
   height: auto;
   padding: 15px;
   background: aqua;
-  color: white;
+  color: grey;
   margin-bottom: 20px;
 }
 
